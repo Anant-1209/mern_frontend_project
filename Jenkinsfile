@@ -41,13 +41,8 @@ pipeline {
             steps {
                 script {
                    bat """
-sonar-scanner.bat 
--D"sonar.projectKey=frontend_jenkins_project" 
--D"sonar.sources=." 
--D"sonar.host.url=http://localhost:9000" 
--D"sonar.token=sqp_4bfe8d01187a1e0fb3b83a7b4beccd414db67713"
--Dsonar.login=%SONAR_TOKEN% 
--X
+                sonar-scanner.bat -D"sonar.projectKey=frontend_jenkins_project" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.token=sqp_4bfe8d01187a1e0fb3b83a7b4beccd414db67713" -Dsonar.login=%SONAR_TOKEN% -X
+
 """
 
                 }
