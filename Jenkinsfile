@@ -36,7 +36,7 @@ pipeline {
 
         stage('Sonar Analysis') {
             environment {
-                SONAR_TOKEN = credentials('mern_frontend_jenkins_project') // Ensure the correct credential ID
+                SONAR_TOKEN = credentials('jenkins-mern-project') // Ensure the correct credential ID
             }
             steps {
                 script {
